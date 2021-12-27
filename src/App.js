@@ -20,7 +20,7 @@ function App() {
       <h1>Todo list</h1>
       <input type='text' onChange={(event) => setText(event.target.value)}></input>
       <button onClick={() => Add()}>Add</button>
-      {todo.map(el => <div> <li key={el.id}>{el.task}</li>
+      {todo.map(el => <div> <li style={{textDecoration : el.done && "line-through"}} key={el.id}>{el.task}</li>
         <button onClick={() => Delete(el.id)}>Delete</button>
         <button onClick={() => Done(el.id)}>Done</button></div>)}
 
